@@ -1,0 +1,52 @@
+
+.container{
+    background-color: rgb(231, 232, 240);
+}
+
+#msg{
+    color: black;
+    font-family: 'Jomhuria', cursive;
+    font-size: 20px;
+}
+
+#title{
+    color: black;
+    font-size: 30px;
+    font-family: 'Jomhuria', cursive;
+}
+
+#line-style{
+    text-decoration: line-through;
+    color: red;
+
+}
+i{
+    font-size: 48px;
+}
+
+[box-id]{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: 0.3s;
+}
+
+[box-id] img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+[box-id].active{
+    border:  solid 3px blue;
+    box-shadow: 0 0 20px blue;
+    transition: 0s;
+}
+
+
+
+#msg{
+    font-size: 36px;
+    text-align: center;
+}

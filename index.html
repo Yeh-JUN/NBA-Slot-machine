@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="Shortcut Icon" type="image/x-icon" href="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/02/25/1/11782111.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>今年NBA總冠軍這看這阿!</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div box-id="1" class="col-1"></div>
+                <div box-id="2" class="col-1"></div>
+                <div box-id="3" class="col-1"></div>
+                <div box-id="4" class="col-1"></div>
+                <div box-id="5" class="col-1"></div>
+                <div box-id="6" class="col-1"></div>
+                <div box-id="7" class="col-1"></div>
+                <div box-id="8" class="col-1"></div>
+                <div box-id="9" class="col-1"></div>
+                <div box-id="10" class="col-1"></div>
+                <div box-id="11" class="col-1"></div>
+                <div box-id="12" class="col-1"></div>
+            </div>
+            <div class="row">
+                <div box-id="32" class="col-1"></div>
+                <div class="col-10 m-auto">
+                    <p id="title" class="m-0">NBA季後賽已經進行得如火如荼了...趕快來<span id="line-style">下注(賠率1:1000)</span>猜測!</p>
+                </div>
+                <div box-id="13" class="col-1"></div>
+            </div>
+            <div class="row">
+                <div box-id="31"class="col-1"></div>
+                <div class="col-10 m-auto">
+                </div>
+                <div box-id="14"class="col-1"></div>
+            </div>
+            <div class="row">
+                <div box-id="30"class="col-1"></div>
+                <div class="col-10 m-auto">
+                    <p id="msg" class="m-0"></p>
+                </div>
+                <div box-id="15"class="col-1"></div>
+            </div>
+            <div class="row">
+                <div box-id="29"class="col-1"></div>
+                <div class="col-10 m-auto">
+                    
+                </div>
+                <div box-id="16"class="col-1"></div>
+            </div>
+            <div class="row">
+                <div box-id="28" class="col-1"></div>
+                <div box-id="27" class="col-1"></div>
+                <div box-id="26" class="col-1"></div>
+                <div box-id="25" class="col-1"></div>
+                <div box-id="24" class="col-1"></div>
+                <div box-id="23" class="col-1"></div>
+                <div box-id="22" class="col-1"></div>
+                <div box-id="21" class="col-1"></div>
+                <div box-id="20" class="col-1"></div>
+                <div box-id="18" class="col-1"></div>
+                <div box-id="19" class="col-1"></div>
+                <div box-id="17" class="col-1"></div>
+            </div>
+            <div class="row">
+                <button class="btn btn-danger">GO</button>
+            </div>
+        </div>
+
+        <!-- <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-line"></i> -->
+        <script>
+            // 資料有32個格子 故是陣列
+            let brickData = [
+                {
+                    id: '1',
+                    color: 'blue',
+                    src: 'https://image.damanwoo.com/files/media/n/b/a/l/o/g/o/w/a/l/nba-logo-wallpaper.jpg',
+                    // icon: 'fab fa-facebook-square',
+                    // js方法可以被當作變數
+                    target: function(){
+                        alert('一定有支球隊會得總冠軍 系統熱到異常..自動再來一次!');
+                        turnAround();
+                        // this 取得最近的物件:自己icon
+                        //用" - "分隔 ,故取得...-"facebook"-...
+                        // return this.icon.split('-')[1];
+                        //寫法二 return `${this.icon.split('-')[1]}`;
+                    }
+                },
+                {
+                    id: '2',
+                    color: 'pink',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/BOS_logo.svg',
+                    // icon: 'fab fa-instagram-square',
+                    target: function(){
+                        return "不是吧! Jayson Tatum已經去海邊度度假了!";
+                        // return this.icon.split('-')[1];
+                        
+                            
+                    }
+                },
+                {
+                    id: '3',
+                    color: 'green',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/CHI_logo.svg',
+                    // icon: 'fab fa-line',
+                    target: function(){
+                        return "不是吧! Zach LaVine已經返鄉準備下季灌籃大賽了!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '4',
+                    color: 'blue',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/CHA_logo.svg',
+                    // icon: 'fab fa-facebook-square',
+                    target: function(){
+                        return `不是吧! 你不知道Gordon Hayward已經去報名"星海爭霸"了嗎?!`;
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '5',
+                    color: 'pink',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/BKN_logo.svg',
+                    // icon: 'fab fa-instagram-square',
+                    target: function(){
+                        return "不是吧! Kevin Durant與兩位巨頭已經準備要去日本參加奧運了";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '6',
+                    color: 'green',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/CLE_logo.svg',
+                    // icon: 'fab fa-line',
+                    target: function(){
+                        
+                        return "不是吧!這支球隊已經去海邊度假囉!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '7',
+                    color: 'blue',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/MIA_logo.svg',
+                    // icon: 'fab fa-facebook-square',
+                    target: function(){
+                        return "不是吧!整支球隊已經去邁阿密海灘的路上了!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '8',
+                    color: 'pink',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/NYK_logo.svg',
+                    // icon: 'fab fa-instagram-square',
+                    target: function(){
+                        return "不是吧!Derrick Rose已經率領隊員在球館密集的訓練了";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '9',
+                    color: 'green',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/DET_logo.svg',
+                    // icon: 'fab fa-line',
+                    target: function(){
+                        return "不是吧!這支球隊已經去海邊度假囉!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '10',
+                    color: 'blue',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/ORL_logo.svg',
+                    // icon: 'fab fa-facebook-square',
+                    target: function(){
+                        return "不是吧!這支球隊已經去海邊度假囉!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '11',
+                    color: 'pink',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/PHI_logo.svg',
+                    // icon: 'fab fa-instagram-square',
+                    target: function(){
+                        return "不是吧!這支球隊已經去海邊度假囉!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '12',
+                    color: 'green',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/IND_logo.svg',
+                    // icon: 'fab fa-line',
+                    target: function(){
+                        return "不是吧!這支球隊已經去海邊度假囉!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '13',
+                    color: 'blue',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/WAS_logo.svg',
+                    // icon: 'fab fa-facebook-square',
+                    target: function(){
+                        return "不是吧! Russell Westbrook正積極準備法國時尚展的比賽欸";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '14',
+                    color: 'pink',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/TOR_logo.svg',
+                    // icon: 'fab fa-instagram-square',
+                    target: function(){
+                        return `不是吧!這支球隊已經"攤"整個賽季要搶今年的狀元籤了!`;
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '15',
+                    color: 'green',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/MIL_logo.svg',
+                    // icon: 'fab fa-line',
+                    target: function(){
+                        return "今年總冠軍很有可能是:密爾瓦基 公鹿!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '16',
+                    color: 'blue',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/DAL_logo.svg',
+                    // icon: 'fab fa-facebook-square',
+                    target: function(){
+                        return "不是吧! Luka Doncic上禮拜才被淘汰正在收拾行李..GO Home!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '17',
+                    color: 'pink',
+                    src: 'https://image.damanwoo.com/files/media/n/b/a/l/o/g/o/w/a/l/nba-logo-wallpaper.jpg',
+                    // icon: 'fab fa-instagram-square',
+                    target: function(){
+                        alert('一定有支球隊會得總冠軍 系統熱到異常了..自動再來一次!');
+                        turnAround();
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '18',
+                    color: 'green',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/DEN_logo.svg',
+                    // icon: 'fab fa-line',
+                    target: function(){
+                        return "不是吧! Nikola Jokic是拿了MPV,但是已經吃T被請出場了!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '19',
+                    color: 'blue',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/GSW_logo.svg',
+                    // icon: 'fab fa-facebook-square',
+                    target: function(){
+                        return "不是吧! Stephen Curry也已經Go Home囉!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '20',
+                    color: 'pink',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/HOU_logo.svg',
+                    // icon: 'fab fa-instagram-square',
+                    target: function(){
+                        return "不是吧!這支球隊也攤了整個賽季了!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '21',
+                    color: 'green',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/MIN_logo.svg',
+                    // icon: 'fab fa-line',
+                    target: function(){
+                        return "不是吧!這支球隊已經去海邊度假囉!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '22',
+                    color: 'blue',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/LAC_logo.svg',
+                    // icon: 'fab fa-facebook-square',
+                    target: function(){
+                        return "今年總冠軍熱隊洛杉磯_快艇 , 已經被逼到 3 : 1 的絕境了 準備GO.."
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '23',
+                    color: 'pink',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/MEM_logo.svg',
+                    // icon: 'fab fa-instagram-square',
+                    target: function(){
+                        return "不是吧!Ja Morant也已經在返鄉的路上了!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '24',
+                    color: 'green',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/OKC_logo.svg',
+                    // icon: 'fab fa-line',
+                    target: function(){
+                        return "不是吧!這支球隊已經去海邊度假囉!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '25',
+                    color: 'blue',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/LAL_logo.svg',
+                    // icon: 'fab fa-facebook-square',
+                    target: function(){
+                        return "不是吧! LeBron James已經在打電話積極組團中...";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '26',
+                    color: 'pink',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/NOP_logo.svg',
+                    // icon: 'fab fa-instagram-square',
+                    target: function(){
+                        return "不是吧!這支球隊已經去海邊度假囉!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '27',
+                    color: 'green',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/POR_logo.svg',
+                    // icon: 'fab fa-line',
+                    target: function(){
+                        return `不是吧! Damian Lillard 已經回家並且準備發新聞稿"吹密..."`;
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '28',
+                    color: 'blue',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/PHX_logo.svg',
+                    // icon: 'fab fa-facebook-square',
+                    target: function(){
+                        return "今年總冠軍很有機會是:鳳凰城 太陽!"
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '29',
+                    color: 'pink',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/SAS_logo.svg',
+                    // icon: 'fab fa-instagram-square',
+                    target: function(){
+                        return "不是吧!這支球隊已經去海邊度假囉!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '30',
+                    color: 'green',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/SAC_logo.svg',
+                    // icon: 'fab fa-line',
+                    target: function(){
+                        return "不是吧!這支球隊已經去海邊度假囉!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '31',
+                    color: 'blue',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/UTA_logo.svg',
+                    // icon: 'fab fa-facebook-square',
+                    target: function(){
+                        return "不是吧! Donovan Mitchell一直到昨天才肯認清輸球要回家了!";
+                        // return this.icon.split('-')[1];
+                    }
+                },
+                {
+                    id: '32',
+                    color: 'pink',
+                    // icon: 'fab fa-instagram-square',
+                    src: 'https://tw.global.nba.com/media/img/teams/00/logos/ATL_logo.svg',
+                    target: function(){
+                        return "今年總冠軍蠻有機會是:亞特蘭大 老鷹!"
+                        // return this.icon.split('-')[1];
+                    }
+                }
+            ];
+        
+            // 渲染畫面
+            let bricks =document.querySelectorAll('[box-id]');
+            console.log(bricks);
+            // 自定義排序
+            bricks = Array.from(bricks).sort((a,b) => {
+                return a.getAttributeNode('box-id').value - b.getAttributeNode('box-id').value;
+            })
+            console.log(bricks);
+
+            bricks.forEach((x , index) => {
+                let id = index + 1;
+                let data = brickData.find(x => x.id == id);
+                // DOM物件操作
+                let img = document.createElement('img');
+                img.setAttribute('src' , data.src);
+                x.appendChild(img);
+                // let icon = document.createElement('i');
+                // icon.setAttribute('class' , data.icon);
+                // icon.style.color = data.color;
+                // x.appendChild(icon);
+            });
+
+            //button start的事情
+            let steps = 0;//剩餘要走的步數
+            let allSteps = 0; //全部的步數
+            let currentIndex = 0; //目前在哪格
+            let speed; //速率(越大越慢)
+
+            // 點擊按鈕開始事件
+            document.querySelector('button'),addEventListener('click' , function(){
+                document.getElementById("msg").innerText = "";
+                speed =50;
+                // 幾格資料
+                let random = Math.floor(Math.random() * brickData.length) + 1 ;
+                steps = random + (3 * brickData.length);
+                allSteps = steps;
+                turnAround();
+            });
+
+            function turnAround(){
+                
+                //從0開始
+                bricks[currentIndex].classList.remove('active');
+                currentIndex++;
+
+                // 將不會超過等於32
+                if(currentIndex >= bricks.length) currentIndex = 0;
+                
+                //走到的加(active)紅框
+                bricks[currentIndex].classList.add('active');
+                steps--;
+
+                // //一般速度
+                // if(steps > 0){
+                //     // 尚未走完,呼叫自己turnAtround
+                //     setTimeout(turnAround , speed);
+                // }
+                // else{
+                //     //走完了
+                //     let msgBox = document.getElementById('msg');
+                //     let val = brickData[currentIndex].target();
+                //     msgBox.innerText = `接下來 -> ${val}`;
+                // }
+
+                //變速速度
+                if(steps > 0){
+                    setTimeout(turnAround , speed);
+                    // 走剩3分之一 ,做減速的動作
+                    // 加速就是減speed 越小越快
+                    if(steps < Math.floor((allSteps / 3))) 
+                        speed +=7;
+                } else{
+                    //走完了
+                    let msgBox = document.getElementById('msg');
+                    let val = brickData[currentIndex].target();
+                    msgBox.innerText = val;
+                }
+            }
+            
+        </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    </body>
+</html>
