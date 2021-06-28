@@ -5,14 +5,15 @@
 
 #msg{
     color: black;
-    font-family: 'Jomhuria', cursive;
+    font-family: 'Anton', sans-serif;
+    font-weight: 700;
     font-size: 20px;
 }
 
 #title{
     color: black;
     font-size: 30px;
-    font-family: 'Jomhuria', cursive;
+    font-family: 'Anton', sans-serif;
 }
 
 #line-style{
