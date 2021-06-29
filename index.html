@@ -67,12 +67,12 @@
                 <div box-id="22" class="col-1"></div>
                 <div box-id="21" class="col-1"></div>
                 <div box-id="20" class="col-1"></div>
-                <div box-id="18" class="col-1"></div>
                 <div box-id="19" class="col-1"></div>
+                <div box-id="18" class="col-1"></div>
                 <div box-id="17" class="col-1"></div>
             </div>
             <div class="row">
-                <button class="btn btn-danger">GO</button>
+                <button id="go-btn" class="btn btn-danger">GO</button>
             </div>
         </div>
 
@@ -442,14 +442,17 @@
             let speed; //速率(越大越慢)
 
             // 點擊按鈕開始事件
-            document.querySelector('button'),addEventListener('click' , function(){
+            let goBtn = document.getElementById('go-btn');
+            goBtn.addEventListener('click' , function(){
                 document.getElementById("msg").innerText = "";
                 speed =50;
                 // 幾格資料
                 let random = Math.floor(Math.random() * brickData.length) + 1 ;
                 steps = random + (3 * brickData.length);
                 allSteps = steps;
+                
                 turnAround();
+                goBtn.disabled = true;
             });
 
             function turnAround(){
@@ -489,6 +492,7 @@
                     let msgBox = document.getElementById('msg');
                     let val = brickData[currentIndex].target();
                     msgBox.innerText = val;
+                    goBtn.disabled = false;
                 }
             }
             
